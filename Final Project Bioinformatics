@@ -77,3 +77,9 @@ OK36    Marshall_County /project/stuckert/jdkoussa/final/SRR26291130_1.fastq.gz 
 OK37    Marshall_County /project/stuckert/jdkoussa/final/SRR26291133_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291133_2.fastq.gz
 
 
+Alpha Diversity
+> qiime diversity alpha \
+>   --i-table table.qza \
+>   --p-metric shannon \
+>   --o-alpha-diversity alpha-diversity.qza
+The data should be saved to alpha-diversity.qza
