@@ -33,5 +33,47 @@ Downloading QIIME
 > conda activate qiime2-amplicon-2024.5
 To access QIIME: conda activate qiime2-amplicon-2024.5
 
+Creating the metafile:
+> nano fastq-manifest-file.tsv  
+The metafile will include the sample-id (OK1-OK37), the group (which county the sample was taken from), then the foward and reverse data filepaths:
+ 
+sample-id	Group   forward-absolute-filepath	reverse-absolute-filepath
+OK1     Marshall_County /project/stuckert/jdkoussa/final/SRR26290918_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290918_2.fastq.gz
+OK2     Marshall_County /project/stuckert/jdkoussa/final/SRR26290919_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290919_2.fastq.gz
+OK3     Marshall_County /project/stuckert/jdkoussa/final/SRR26290920_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290920_2.fastq.gz
+OK4     Marshall_County /project/stuckert/jdkoussa/final/SRR26290931_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290931_2.fastq.gz
+OK5     Marshall_County /project/stuckert/jdkoussa/final/SRR26290932_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290932_2.fastq.gz
+OK6     Marshall_County /project/stuckert/jdkoussa/final/SRR26290934_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290934_2.fastq.gz
+OK7     Marshall_County /project/stuckert/jdkoussa/final/SRR26290935_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290935_2.fastq.gz
+OK8     LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290937_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290937_2.fastq.gz
+OK9     Marshall_County /project/stuckert/jdkoussa/final/SRR26290944_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290944_2.fastq.gz
+OK10    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290973_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290973_2.fastq.gz
+OK11    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290974_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290974_2.fastq.gz
+OK12    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290975_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290975_2.fastq.gz
+OK13    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290976_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290976_2.fastq.gz
+OK14    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290977_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290977_2.fastq.gz
+OK15    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290985_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290985_2.fastq.gz
+OK16    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290986_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290986_2.fastq.gz
+OK17    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290987_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290987_2.fastq.gz
+OK18    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290988_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290988_2.fastq.gz
+OK19    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26290989_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26290989_2.fastq.gz
+OK20    Marshall_County /project/stuckert/jdkoussa/final/SRR26291090_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291090_2.fastq.gz
+OK21    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26291095_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291095_2.fastq.gz
+OK22    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26291096_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291096_2.fastq.gz
+OK23    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26291097_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291097_2.fastq.gz
+OK24    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26291098_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291098_2.fastq.gz
+OK25    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26291099_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291099_2.fastq.gz
+OK26    Marshall_County /project/stuckert/jdkoussa/final/SRR26291101_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291101_2.fastq.gz
+OK27    LeFlore_County  /project/stuckert/jdkoussa/final/SRR26291107_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291107_2.fastq.gz
+OK28    Marshall_County /project/stuckert/jdkoussa/final/SRR26291121_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291121_2.fastq.gz
+OK29    Marshall_County /project/stuckert/jdkoussa/final/SRR26291122_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291122_2.fastq.gz
+OK30    Marshall_County /project/stuckert/jdkoussa/final/SRR26291124_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291124_2.fastq.gz
+OK31    Marshall_County /project/stuckert/jdkoussa/final/SRR26291125_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291125_2.fastq.gz
+OK32    Marshall_County /project/stuckert/jdkoussa/final/SRR26291126_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291126_2.fastq.gz
+OK33    Marshall_County /project/stuckert/jdkoussa/final/SRR26291127_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291127_2.fastq.gz
+OK34    Marshall_County /project/stuckert/jdkoussa/final/SRR26291128_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291128_2.fastq.gz
+OK35    Marshall_County /project/stuckert/jdkoussa/final/SRR26291129_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291129_2.fastq.gz
+OK36    Marshall_County /project/stuckert/jdkoussa/final/SRR26291130_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291130_2.fastq.gz
+OK37    Marshall_County /project/stuckert/jdkoussa/final/SRR26291133_1.fastq.gz /project/stuckert/jdkoussa/final/SRR26291133_2.fastq.gz
 
 
